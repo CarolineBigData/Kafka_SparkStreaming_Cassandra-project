@@ -23,6 +23,7 @@ Kafka -> Spark Streaming -> Cassandra
 		CREATE TABLE paymentoptions (
 			uuid uuid primary key,
 			payment text,
+			click double
 		
 		);
 	  ```
