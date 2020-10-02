@@ -40,7 +40,7 @@ sbt package && spark-submit --class StreamHandler --master local[*] --packages "
 	```
 2. `select * from paymentoptions` from CQLSH to see if the data is being processed saved correctly!
 
-
+![github_small](https://github.com/CarolineBigData/Kafka_SparkStreaming_Cassandra-project/issues/1#issue-713929269)
 
 This is the screenshot the final result. The number of clicks was groupby the three types of clicks every 5 seconds.
 
