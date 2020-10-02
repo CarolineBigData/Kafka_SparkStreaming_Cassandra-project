@@ -16,12 +16,12 @@ Kafka -> Spark Streaming -> Cassandra
 1. Start a Cassandra database
 	* create a keyspace called `payment_space` (SimpleStrategy, replication=1)
 		```
-		CREATE KEYSPACE paymentspace
+		CREATE KEYSPACE payment_space
 		WITH replication = {'class': 'SimpleStrategy, 'replication_factor' : 1};
 		```
 	* create a table called `paymentclicks` with the following schema
 		```
-		CREATE TABLE paymentoptions (
+		CREATE TABLE paymentclicks (
 			uuid uuid primary key,
 			payment text,
 			click double
@@ -38,7 +38,7 @@ sbt package && spark-submit --class StreamHandler --master local[*] --packages "
 	./iot_devices.py payment_method
 	./iot_devices.py first_payment_date
 	```
-2. `select * from paymentoptions` from CQLSH to see if the data is being processed saved correctly!
+2. `select * from paymentclicks` from CQLSH to see if the data is being processed saved correctly!
 
 ![github-small](https://user-images.githubusercontent.com/58568024/94973921-faadae00-04da-11eb-8046-c8f11c494009.png)
 
