@@ -1,4 +1,5 @@
-# Kafka_SparkStreaming_Cassandra-project Example
+# Kafka_SparkStreaming_Cassandra-project
+
 
 
 ## Overview
