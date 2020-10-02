@@ -40,7 +40,7 @@ sbt package && spark-submit --class StreamHandler --master local[*] --packages "
 	```
 2. `select * from paymentoptions` from CQLSH to see if the data is being processed saved correctly!
 
-
+![github-small](https://user-images.githubusercontent.com/58568024/94973921-faadae00-04da-11eb-8046-c8f11c494009.png)
 
 This is the screenshot the final result. The number of clicks was groupby the three types of clicks every 5 seconds.
 
