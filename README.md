@@ -14,12 +14,12 @@ Kafka -> Spark Streaming -> Cassandra
 1. Start a Kafka server
 	* create a topic called `portfolio_click`
 1. Start a Cassandra database
-	* create a keyspace called `paymentspace` (SimpleStrategy, replication=1)
+	* create a keyspace called `payment_space` (SimpleStrategy, replication=1)
 		```
 		CREATE KEYSPACE paymentspace
 		WITH replication = {'class': 'SimpleStrategy, 'replication_factor' : 1};
 		```
-	* create a table called `paymentoptions` with the following schema
+	* create a table called `paymentclicks` with the following schema
 		```
 		CREATE TABLE paymentoptions (
 			uuid uuid primary key,
@@ -39,3 +39,5 @@ sbt package && spark-submit --class StreamHandler --master local[*] --packages "
 	./iot_devices.py first_payment_date
 	```
 2. `select * from paymentoptions` from CQLSH to see if the data is being processed saved correctly!
+
+
